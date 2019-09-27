@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About the Bootcamp</title>
+    <style>
+        .masthead {
+            height: 100vh;
+            min-height: 10px;
+            background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm85-tong-08_2.jpg?auto=format&bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1600&s=bda80f4d48d5dc54d0231676a4d5a35a');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+        }</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
+<body class="masthead">
+
+    <div th:insert="base::navbar"></div>
+
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="font-weight-light"> Java Web Developer Boot Camp</h1><br>
+                <p class="lead">The Java Web Developer Boot Camp is an 8 hour a day (9 am - 5 pm, M-F) 8-week, immersive software engineering program funded by the Department of Labor. This course aims to increase the number of skilled software developers in this country. We do this by accepting qualified candidates who cannot afford the cost of a coding boot camp. If accepted into the program all fees will be covered by the program.</p>
+                <h2><span class="text-right" style="font-family: 'Mansalva', cursive; margin-right: 2.5em;">What you will learn:</span></h2>
+                <p class="lead">The Java Web Development Bootcamp takes you from your first java program to developing a web application. This course will give you a fast start on your career so you can take it to the next level. The course will teach you by forcing you to write over 130 java applications, including 5 major web applications. Programming challenges will keep you on your toes.
+                <p class="lead">You'll learn to create web pages. You'll use frameworks and stored procedures. You'll connect to a database using the Java Persistence API(JPA) and Hibernate, and most importantly, all assignments are submitted through git, so you will learn to develop using best practices in class, to make it easy to contribute value when you are on the job.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

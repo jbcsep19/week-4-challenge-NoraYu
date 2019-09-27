@@ -43,8 +43,13 @@ public class HomeController {
 
 
     @PostMapping("/process")
-    public String processForm(@ModelAttribute Messagepost messagepost, BindingResult result,
-                              @RequestParam("file") MultipartFile file) {
+    public String processForm(@ModelAttribute Messagepost messagepost
+                              /*
+                              ,BindingResult result,
+                             @RequestParam("file") MultipartFile file
+                               */
+    ) {
+        /*
         if (file.isEmpty()){
             return  "redirect:/add";
         }
@@ -60,6 +65,8 @@ public class HomeController {
         if (result.hasErrors()) {
             return "messagepostform";
         }
+
+         */
         messagepostRepository.save(messagepost);
         return "redirect:/";
     }

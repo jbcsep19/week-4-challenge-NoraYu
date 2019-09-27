@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -19,9 +20,25 @@ public class Messagepost {
     @NotNull
     private String content;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date posteddate;
+    private String posteddate;
 
     private String pic;
+
+    public Messagepost(){
+        Date date=new Date();
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        this.posteddate = dateFormat.format(date);
+
+    }
+    public Messagepost(String title, String content){
+        this();
+        this.title=title;
+        this.content=content;
+        this.id=getId();
+        this.pic=null;
+    }
+
+
 
     public long getId() {
         return id;
@@ -39,12 +56,16 @@ public class Messagepost {
         this.content = content;
     }
 
-    public Date getPosteddate() {
+    public String getPosteddate() {
+
         return posteddate;
     }
 
-    public void setPosteddate(Date posteddate) {
-        this.posteddate = posteddate;
+    public void setPosteddate() {
+        Date date=new Date();
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");
+
+        this.posteddate = dateFormat.format(date);
     }
 
 
